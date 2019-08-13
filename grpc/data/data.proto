@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package data;
+
+service RpcService {
+    rpc Hello (Args) returns (Reply) {}
+}
+
+
+message Args {
+    int32 age  = 1;
+    string name = 2;
+}
+
+message Reply {
+    string title = 1;
+}
