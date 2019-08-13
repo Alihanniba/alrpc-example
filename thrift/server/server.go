@@ -19,7 +19,7 @@ type HelloServer struct {
 
 func (h *HelloServer) Hello (ctx context.Context,req *data.Args_) (*data.Reply, error) {
 	res := data.Reply{
-		Title:fmt.Sprintf("%s 明年 %d 岁", req.Name, req.Age),
+		Title:fmt.Sprintf("%s 明年 %d 岁", req.GetName(), req.GetAge()),
 	}
 	return &res, nil
 }
